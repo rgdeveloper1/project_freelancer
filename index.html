@@ -1180,6 +1180,53 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/animation.gsap.js"></script>
+    <script src="js/jquery-ripples.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/101/three.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/multislider.min.js"></script>
+    <script src="js/maxtra.js"></script>
+<!-- carousel js part  -->
+    <script>
+        $('.carousel').carousel({
+            interval: 9000
+        });
+        $('#basicSlider').multislider({
+            continuous: false,
+            duration: 3000
+        });
+    </script>
+
+    <!--Wave Effect on Why Choose Us Start-->
+    <script>
+        $("document").ready(function () {
+            let scene, camera, renderer, ribbon
+
+            const container = document.querySelector('#container')
+
+            const init = () => {
+
+                scene = new THREE.Scene()
+                camera = new THREE.PerspectiveCamera(75, 1, 0.1, 10000)
+                camera.position.z = 2
+
+                renderer = new THREE.WebGLRenderer({
+                    antialias: true,
+                    alpha: true
+                })
+                container.appendChild(renderer.domElement)
+
+                ribbon = new THREE.Mesh(
+                    new THREE.PlaneGeometry(1, 1, 128, 128),
+                    new THREE.ShaderMaterial({
+                        uniforms: {
+                            time: {
+                                value: 1.0
+                            },
+                        },
+                        vertexShader: `
+
 <script src="js/jquery-ripples.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -1223,6 +1270,7 @@ const init = () => {
         time: { value: 1.0 },
       },
       vertexShader: `
+
         varying vec3 vEC;
         uniform float time;
 
@@ -1448,7 +1496,7 @@ $('.uiuxRead').css({
 $('.uiUxDesign').on('mouseleave', function() {
 $('.uiUxDesign>i').css({
     'display':'block',
-});
+})
   $('.uiUxDesign>h2,.listDesign>li>a').css({
     'color':'#1c1319','transition': 'all 0.5s ease-in-out',
 });
@@ -1478,39 +1526,39 @@ $('.eCommServe>p').css({
 });
 $('.eComRead').css({
     'display':'block','transition': 'all 0.3s ease-in-out',
-});
-});
+})
+})
 $('.eCommServe').on('mouseleave', function() {
 $('.eCommServe>i').css({
     'display':'block',
-});
+})
   $('.eCommServe>h2,.listeCom>li>a').css({
     'color':'#1c1319','transition': 'all 0.5s ease-in-out',
-});
+})
 $('.eCommServe>h2').css({
     'margin': '60px 0 30px 0',
-});
+})
     $('.eCommServe>p').css({
     'display':'none','transition': 'all 0.3s ease-in-out',
-});
+})
 $('.eComRead').css({
     'display':'none','transition': 'all 0.3s ease-in-out',
 });
-});
+})
 
 $('.reSorceOting').on('mouseover', function() {
 $('.reSorceOting>i').css({
     'display':'none',
-});
+})
 $('.reSorceOting>h2,.listreSrce>li>a').css({
     'color':'#f6f9fe','transition': 'all 0.5s ease-in-out',
-});
+})
 $('.reSorceOting>h2').css({
     'margin': '10px 0 15px 0',
 });
 $('.reSorceOting>p').css({
     'display':'block','transition': 'all 0.3s ease-in-out',
-});
+})
 $('.reSrceRead').css({
     'display':'block','transition': 'all 0.3s ease-in-out',
 });

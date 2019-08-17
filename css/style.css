@@ -2637,11 +2637,53 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 .footer-quick_link::after{
     content: '';
     position: absolute;
+    height: 60px;
+    width: 1px;
+    background: #000000;
+    right: -30px;
+    top: 15px;
+}
+
+.testimonila_client_profile .client_image img{
+    width: 100%;
+    height: 100%;
+}
+.testimonila_client_profile .testimonial_client_name{
+    margin-left: 60px;
+    padding-top: 10px;
+}
+.testimonila_client_profile .testimonial_client_name h6{
+    font-size: 24px;
+}
+.testimonila_client_profile .testimonial_client_name p{
+    font-size: 16px;
+}
+/* === Testimonial Part End === */
+
+  
+  
+/* === Industries Appreciation Part Start === */
+.appreciation_content{
+    background: #5921a3;
+    color: #ffffff;
+    padding-top: 88px;
+}
+.appreciation_content .our_industries{
+    font-size: 72px;
+    color: #fff;
+    font-weight: 100;
+}
+.appreciation_content .appreciation{
+    font-size: 48px;
+    color: #fff;
+    font-weight: 100;
+
     width: 29px;
     height: 2px;
     background: #f9f9f1;
     bottom: 225px;
     left: 129px;
+
 }
 .footer_tag-sign{margin-top: 46px}
 .footer_tag-sign>p{font-family: 'Cera Pro';
